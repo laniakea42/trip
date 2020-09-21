@@ -367,24 +367,25 @@ input[type="submit"] {
 	cursor: pointer;
 	border: 1px solid #ffffff;
 	border-radius: 27.5px;
-	padding: 18px 34px;
+	padding: 18px 32px;
 	line-height: 1;
 	transition: 300ms ease-in;
 	overflow: hidden;
 	outline: 0;
 	position: relative;
 	span {position: relative; z-index: 3; color: #fff; transition: 300ms ease-in;}
-	&:after {
+	&:before {
 		content: ' ';
 		position: absolute; 
 		left: -1px; right: -1px;
-		bottom: -1px; top: -1px; position: absolute;
+		bottom: -1px; top: -1px;
 		background: $grad; z-index: 0; opacity: 0;
 		transition: 300ms ease-in;
 	}
 	&:hover {
 	border: 1px solid rgba($color: #000000, $alpha: 0);
-		&:after {opacity: 1;}
+		&:before {opacity: 1;}
+		span {color: #fff}
 	}
 }
 .btn.filled {
@@ -394,8 +395,8 @@ input[type="submit"] {
 		display: inline; margin: 0; padding: 0;
 		font-size: inherit; opacity: inherit;
 	}
-	&:after {opacity: 1;}
-	&:hover:after {opacity: 0;}
+	&:before {opacity: 1;}
+	&:hover:before {opacity: 0;}
 }
 
 .check--list {
@@ -554,6 +555,7 @@ header {
 	.container {height: 100%}
 	.langs {
 		margin-right: auto; margin-left: 45px;
+		cursor: default;
 	}
 	a {
 		color: #fff;
@@ -574,12 +576,17 @@ header {
 	}
 	&.scrolled {
 		color: #333333;
-		a {color: #333333;}
+		a {
+			color: #333333;
+			&.active {opacity: .7; color: #999;}
+			&:hover {color: $yellow;}
+		}
 		.w {opacity: 0;}
 		.b {opacity: 1;}
 		.btn {
 			border: 1px solid #ffbe00;
 			span {color: #ffbe00;}
+			&:hover span {color: #fff}
 		}
 	}
 }
@@ -630,3 +637,15 @@ header {
 }
 
 .about-i .container {padding-top: 67px;}
+
+.langs .arr {
+	position: relative;
+	display:inline;
+	&:after {
+		content: '\f063';
+		font-family: 'fontAwesome';
+		position: absolute;
+		font-size: 11px;
+		top: 4px; right: -15px;
+	}
+}

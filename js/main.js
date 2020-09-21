@@ -83,7 +83,7 @@ $(function(){
         return false;
     });
 
-    $('.tel').inputmask('+7 (999) 999-99-99');
+    $('.tel').inputmask('+7 ( 999 ) - 999 - 99 - 99');
 });
 
 $(window).on("load",function(e){
