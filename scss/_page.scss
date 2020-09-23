@@ -2,19 +2,19 @@
 .page {
 	.news1, .news {
 		.date {
-			color: #3361eb;
+			color: $yellow;
 		}
 	}
 	.page_nav {
 		.active {
-			color: #3361eb;
+			color: $yellow;
 		}
 	}
     #ask-form {
         max-width: 350px;
     }
     .write {
-        color: #3361eb;
+        color: $yellow;
         text-decoration: none;
         &:hover {
             text-decoration: underline;
@@ -24,7 +24,7 @@
         margin: 25px 0;
     }
     p a {
-        color: #3361eb;
+        color: $yellow;
         text-decoration: underline;
         &:hover {
             text-decoration: none;
@@ -32,7 +32,7 @@
     }
     .h2 a {
         font-size: 16px;
-        color: #3361eb;
+        color: $yellow;
     }
 	@media screen and (max-width: 1024px) {
 		#photos-list td img {
@@ -60,20 +60,25 @@
 }
 /* breadcrumbs */
 .breadcrumbs {
-	font-size: 16px;
+    font-size: 16px;
+    letter-spacing: 0.01em;
+    .container {padding-top: 45px; padding-bottom: 0px;}
 	ul {
 		@include ul-default;
 		li {
-			padding: 5px 0px;
-			color: #3361eb;
+            padding: 2px 0px;
+            color: #999999;
 			@include inline-block;
 			a {
-				text-decoration: none;
+                text-decoration: none;
+			    color: $yellow;
 			}
 			&:after {
-				content: '/';
-				margin: 0px 2px 0px 7px;
-				color: #282727;
+                content: '\f061';
+                font-family: 'fontawesome';
+                margin: 4px 8px 0px 15px;
+                font-size: 10px;
+				color: #999999;
 				@include inline-block;
 			}
 			&:last-of-type:after {
@@ -85,6 +90,24 @@
 /* breadcrumbs */
 
 /* modal */
+
+.modal .m-hat {
+    background: $grad;
+    color: #fff;
+    padding: 45px 140px 36px;
+    text-align: center;
+    .comm {
+        opacity: 0.7;
+        font-size: 20px;
+        line-height: 1.2;
+        color: #ffffff;
+    }
+}
+.modal .m-body {
+    padding: 40px 126px 60px;
+
+}
+
 .modal {
     display: none;
     background-color: rgba(0,0,0,0.7);
@@ -93,7 +116,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    z-index: 99;
+    z-index: 999;
     .modal__layer {
         position: absolute;
         top: 0;
@@ -102,61 +125,65 @@
         bottom: 0;
     }
     .modal__block {
-        width: 420px;
-        background-color: #fff;
+        width: 810px;
+        background-color: #f9f9f9;
         position: absolute;
-        padding: 20px;
+        padding: 0;
         left: 0;
         right: 0;
+        box-shadow: 0px 5px 29px 1px rgba(0,0,0,0.1);
+        border-radius: 10px;
+        overflow: hidden;
         top: 50%;
         margin: 0 auto;
         transform: translateY(-50%);
         h4 {
-            font-size: 20px;
+            font-size: 40px;
             text-align: center;
-            padding: 0 10px;
-            margin: 0;
+            padding: 0;
+            margin: 0 0 20px;
+            color: #fff;
         }
     }
     form {
         display: block;
-        padding-bottom: 130px;
-        margin-top: 15px;
         textarea, 
         input[type="text"], 
         input[type="email"], 
         input[type="search"], 
-        input[type="password"] {
+        input[type="password"],
+        input[type="tel"] {
             width: 100%;
-            min-height: 65px;
+            min-height: 47px;
+            height: 49px;
             background-color: #fff;
-            border-radius: 0px;
-            background-color: #fff;
+            border: 1px solid #dddddd;
+            border-radius: 5px;
             font-family: $regular;
-            font-size: 18px;
-            color: #414141;
-            border: 1px solid #bababa;
-            padding: 20px 20px;
+            font-size: 16px;
+            color: #666;
+            outline: 0;
+            padding: 17px 10px 17px 30px;
             margin-bottom: 20px;
             box-shadow: none;
             line-height: 1;
             &::placeholder {
-                color: #414141;
+                color: #999;
             }
         }
-        .g-recaptcha {
-            float: right;
+        .g-recaptcha, .policy, .btn {
+            width: max-content;
+            margin: 0 auto;
         }
-        .btn {
-            float: right;
-            margin: 15px 0 0 0;
-        }
+        .g-recaptcha, .policy {margin-bottom: 15px;}
+        .btn {border: 0;}
     }
     @media screen and (max-width: 1200px) {
         .modal__block {
             h4 {
-                font-size: 18px;
+                font-size: 30px;
             }
+            .comm {font-size: 18px;}
         }
         form {
             textarea, 
@@ -164,7 +191,7 @@
             input[type="email"], 
             input[type="search"], 
             input[type="password"] {
-                min-height: 50px;
+                min-height: 48px;
                 font-size: 16px;
                 padding: 14px 15px;
             }
@@ -176,7 +203,8 @@
             input[type="text"], 
             input[type="email"], 
             input[type="search"], 
-            input[type="password"] {
+            input[type="password"],
+            input[type="tel"] {
                 min-height: 40px;
                 font-size: 14px;
                 padding: 10px 15px;
@@ -184,11 +212,26 @@
             }
         }
     }
+    @media (max-width: 840px) {
+        .modal__block {
+            width: auto;
+            left: 15px; right: 15px;
+        }
+    }
     @media screen and (max-width: 768px) {
         .modal__block {
             h4 {
-                font-size: 16px;
+                font-size: 22px;
+                margin-bottom: 5px;
             }
+            .comm {font-size: 14px;}
+            .m-hat {padding: 20px 30px 20px;}
+            .m-body {padding: 25px 30px 25px;}
+            .policy {width: auto; text-align: center;}
+        }
+        .close {
+            right: 5px; top: 5px; width: 23px;
+            &:before, &:after {width: 23px;}
         }
     }
     @media screen and (max-width: 500px) {
@@ -201,8 +244,12 @@
     @media screen and (max-width: 380px) {
         form {
             .g-recaptcha {
-                transform: scale(0.85);
-                transform-origin: 100% 50%;
+                margin: 0; width: 100%;
+                display: flex; justify-content: center;
+                iframe {
+                    transform: scale(0.85);
+                    transform-origin: 50% 50%;
+                }
             }
         }
     }
@@ -210,21 +257,23 @@
 
 .call--btn {
     position: fixed;
-    bottom: 100px;
-    right: 40px;
-    display: table;
-    background-color: #ffcc00;
+    bottom: 26vh;
+    right: 75px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: $grad;
     font-family: 'FontAwesome';
     border-radius: 100%;
     text-decoration: none!important;
-    width: 80px;
-    height: 80px;
+    width: 56px;
+    height: 56px;
     text-align: center;
-    padding: 23px 5px 5px 5px;
-    box-shadow: 0px 0px 15px rgba(0,0,0,0.7);
+    box-shadow: 0px 0px 15px rgba(0,0,0,0.2);
     box-sizing: border-box;
+    cursor: pointer;
     outline: none!important;
-    z-index: 1;
+    z-index: 999;
     &:hover {
         animation-name: phone;
         animation-iteration-count: 1;
@@ -232,30 +281,30 @@
     }
     i {
         display: block;
-        font-size: 35px;
+        font-size: 24px;
         color: #fff;
     }
     &:after, &:before  {
         content: '';
-        width: 90%;
-        height: 90%;
-        background-color: transparent;
-        border: 1px solid #ffcc00;
+        width: 80%;
+        height: 80%;
+        background: transparent;
         position: absolute;
-        top: 5%;
-        left: 5%;
+        top: 6%;
+        left: 6%;
         border-radius: 100%;
         animation-iteration-count: infinite;
         animation-duration: 1.2s;
         animation-name: ring;
         outline: none;  
+        z-index: 0;
     }
     &:after {
         animation-delay: 0.6s;
     }
     &:before {
         animation-delay: 0.8s;
-        border: 1px solid #d9af04;
+        border: 2px solid $yellow;
     }
     @media screen and (max-width: 1440px) {
         margin-right: 0;
@@ -265,11 +314,10 @@
     @media screen and (max-width: 991px) {
         width: 50px;
         height: 50px;
-        padding-top: 15px;
         right: 15px;
         bottom: 80px;
         i {
-            font-size: 24px;
+            font-size: 20px;
         }
     }
     @media screen and (max-width: 768px) {

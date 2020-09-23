@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>Contacts</title>
+	<title>Контакты</title>
 	<link rel="stylesheet" href="css/libs.css">
 	<link rel="stylesheet" href="css/style.css">
 </head>
@@ -18,6 +18,11 @@
 	
 	<header class="header">
 			<div class="container flex spb center">
+				<div class="nav--btn">
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
 				<a href="index.html" class="logo-link">
 					<img src="./img/logo.png" alt="" class="w">
 					<img src="./img/logo_b.png" alt="" class="b">
@@ -40,22 +45,36 @@
 				</nav>
 	
 				<button class="btn open--modal" data-modal="#contactus"><span>Связаться с нами</span></button>
+	
+				<a href="tel:+777777777" class="col--phone m"></a>
 			</div>
 	</header>
+	
+	<a href="tel:+777777777" class="call--btn">
+		<i class="fa fa-phone" aria-hidden="true"></i>
+	</a>
 	
 	<div class="modal" id="contactus">
 		<div class="modal__layer"></div>
 		<div class="modal__block">
 			<a href="#" class="close"></a>
-			<h4>Связаться с нами</h4>
-		</div>
-	</div>
+			<div class="m-hat">
+				<h4>Связаться с нами</h4>
+				<div class="comm">Оставьте свой телефон, и мы свяжемся с вами в ближайшее время</div>
+			</div>
 	
-	<div class="modal" id="m-offer">
-		<div class="modal__layer"></div>
-		<div class="modal__block">
-			<a href="#" class="close"></a>
-			<h4>Связаться с нами</h4>
+			<div class="m-body">
+				<form action="">
+					<input type="text" required placeholder="Ваше имя">
+					<input type="tel" required placeholder="Номер телефона" class="tel">
+					<div class="g-recaptcha"><div style="width: 304px; height: 78px;"><div><iframe src="https://www.google.com/recaptcha/api2/anchor?ar=1&amp;k=6LfycasZAAAAAOleQj_j_cJoz1tKKWUcEs1p_Thw&amp;co=aHR0cDovL2x1Y2t5ZW5nbGlzaC45ei5rejo4MA..&amp;hl=en&amp;v=6TWYOsKNtRFaLeFqv5xN42-l&amp;size=normal&amp;cb=7idt9xxob5ks" width="304" height="78" role="presentation" name="a-xh09sx8p8cox" frameborder="0" scrolling="no" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox"></iframe></div><textarea id="g-recaptcha-response-2" name="g-recaptcha-response" class="g-recaptcha-response" style="width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px 25px; padding: 0px; resize: none; display: none;"></textarea></div><iframe style="display: none;"></iframe></div>
+					<div class="policy">
+						Нажимая на кнопку «Отправить» вы соглашаетесь с
+						<a href="#">политикой конфиденциальности</a>
+					</div>
+					<button class="btn filled" type="submit" data-modal="#success-send"><span>Отправить</span></button>
+				</form>
+			</div>
 		</div>
 	</div>
 	
@@ -63,70 +82,158 @@
 		<div class="modal__layer"></div>
 		<div class="modal__block">
 			<a href="#" class="close"></a>
-			<h4>Ваша заявка успешно отправлена</h4>
+			<div class="m-hat">
+				<h4>Ваша заявка успешно отправлена</h4>
+			</div>
 		</div>
 	</div>
+	
+	<div class="modal" id="success-msg">
+		<div class="modal__layer"></div>
+		<div class="modal__block">
+			<a href="#" class="close"></a>
+			<div class="m-hat">
+				<h4>Ваше сообщение успешно отправлено</h4>
+			</div>
+		</div>
+	</div>
+	<div class="wrapper cts-page page">
 
-    <footer class="footer">
-      <div class="container upper grid">
-        <div class="logo">
-          <a href="index.html"><img src="./img/logo.png" alt=""></a>
-          <div class="soc-row">
-            <a href="#" target="_blank" class="soc-link"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-            <a href="#" target="_blank" class="soc-link"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-            <a href="#" target="_blank" class="soc-link"><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
-          </div>
+		<div class="page-heading">
+			<img src="./img/ab-p.jpg" alt="" class="bg">
+			<div class="container">
+        <h1>Контакты</h1>
+        <div class="desc">Круглосуточная работа и оперативность. Прием заказов осуществляется 365 дней в году в любое время суток</div>
+			</div>
+		</div>
+
+		<div class="breadcrumbs">
+			<div class="container">
+				<ul>
+          <li><a href="index.html">Главная</a></li>
+					<li>Контакты</li>
+				</ul>
+			</div>
+		</div>
+		
+		<main>
+			<div class="container">
+				<div class="grid-3">
+					<div class="col--phone">
+						<a href="tel:+7 (727) 999 00 00">+7 (727) 999 00 00</a>
+						<a href="tel:+7 (777) 999 00 02">+7 (777) 999 00 02</a>
+					</div>
+					<div class="col--location">
+						Казахстан, г. Алматы, ул. Пушкина, д. 123
+					</div>
+					<a href="mailto:info@timetotravel.kz" class="col--email">info@timetotravel.kz</a>
+					<div class="soc-row">
+						<a href="#" target="_blank" class="soc-link"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+						<a href="#" target="_blank" class="soc-link"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+						<a href="#" target="_blank" class="soc-link"><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
+					</div>
+				</div>
+			</div>
+
+			<div class="map">
+				<iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A592cee0e6863a55e45240ced46df726efa57b4a89517171fcf1600c372a64fd1&amp;source=constructor" width="100%" height="420" frameborder="0"></iframe>
+			</div>
+		</main>
+
+		<section class="grey-bg cts-form">
+			<div class="container">
+				<h2>Связаться с нами</h2>
+				<p>Оставьте свой телефон, и мы свяжемся с вами в ближайшее время</p>
+				<form action="">
+					<div class="grid">
+						<input type="text" required placeholder="Ваше имя">
+						<input type="tel" required placeholder="Номер телефона" class="tel">
+						<input type="email" required placeholder="Электронная почта">
+						<textarea placeholder="Текст сообщения"></textarea>
+						<div class="g-recaptcha"><div style="width: 304px; height: 78px;"><div><iframe src="https://www.google.com/recaptcha/api2/anchor?ar=1&amp;k=6LfycasZAAAAAOleQj_j_cJoz1tKKWUcEs1p_Thw&amp;co=aHR0cDovL2x1Y2t5ZW5nbGlzaC45ei5rejo4MA..&amp;hl=en&amp;v=6TWYOsKNtRFaLeFqv5xN42-l&amp;size=normal&amp;cb=3vn9qgilto0f" width="304" height="78" role="presentation" name="a-plaaf28l8ub5" frameborder="0" scrolling="no" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox"></iframe></div><textarea id="g-recaptcha-response-2" name="g-recaptcha-response" class="g-recaptcha-response" style="width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px 25px; padding: 0px; resize: none; display: none;"></textarea></div><iframe style="display: none;"></iframe></div>
+					</div>
+					<div class="flex center wow fadeInUp">
+						<button class="btn filled opem--modal" type="submit" data-modal="#success-msg"><span>Отправить</span></button>
+						<div class="policy">
+							Нажимая на кнопку «Отправить» вы соглашаетесь с 
+							<a href="#">политикой конфиденциальности</a>
+						</div>
+					</div>
+				</form>
+			</div>
+		</section>
+
+
+  </div>
+  <footer class="footer">
+    <div class="container upper grid">
+      <div class="logo">
+        <a href="index.html" class="index-link"><img src="./img/logo.png" alt=""></a>
+        <div class="soc-row">
+          <a href="#" target="_blank" class="soc-link"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+          <a href="#" target="_blank" class="soc-link"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+          <a href="#" target="_blank" class="soc-link"><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
         </div>
-    
-        <div class="col">
-          <div class="title">Услуги</div>
-          <ul class="check--list">
-            <li><a href="#">БАО</a></li>
-            <li><a href="#">Чарын</a></li>
-            <li><a href="#" class="active">Кольсайские озера</a></li>
-            <li><a href="#">Алтын-Емел</a></li>
-            <li><a href="#">Тузколь</a></li>
-            <li><a href="#">Плато Ассы</a></li>
-          </ul>
-        </div>
-    
-        <div class="col">
-          <div class="title">Навигация</div>
-          <ul class="check--list">
-            <li><a href="#">Услуги</a></li>
-            <li><a href="#">О компании</a></li>
-            <li><a href="#">Контакты</a></li>
-            <li><a href="#">Блог</a></li>
-          </ul>
-        </div>
-    
-        <div class="col-cts">
-          <div class="col--phone">
-            <a href="tel:+77079900002">+7 (727) 999 00 00</a>
-            <a href="tel:+77079900002">+7 (777) 999 00 02</a>
-          </div>
-    
-          <div class="col--location">
-            <span>Казахстан, г. Алматы,<br>ул. Пушкина, д. 123</span>
-          </div>
-    
-          <a href="mailto:info@timetotravel.kz" class="col--email">info@timetotravel.kz</a>
-        </div>
-    
       </div>
-    
-      <div class="down">
-        <div class="container flex spb center">
-          <span>Copyright © 2020 Time To Travel. All rights reserved</span>
-          <a href="https://artmedia.kz/" target="_blank">
-            Создание сайта <img src="./img/artmed.png" alt="">
-          </a>
-        </div>
+  
+      <div class="col">
+        <div class="title">Услуги</div>
+        <ul class="check--list">
+          <li><a href="#">БАО</a></li>
+          <li><a href="#">Чарын</a></li>
+          <li><a href="#" class="active">Кольсайские озера</a></li>
+          <li><a href="#">Алтын-Емел</a></li>
+          <li><a href="#">Тузколь</a></li>
+          <li><a href="#">Плато Ассы</a></li>
+        </ul>
       </div>
-    </footer>
-    <script type="text/javascript" src="js/jquery.js"></script>
-		<script type="text/javascript" src="js/libs.js"></script>
-		<script src="js/wow.min.js"></script> <script> new WOW().init(); </script>
-		<script type="text/javascript" src="js/main.js"></script>
-</body>
-</html>
+  
+      <div class="col">
+        <div class="title">Навигация</div>
+        <ul class="check--list">
+          <li><a href="#">Услуги</a></li>
+          <li><a href="#">О компании</a></li>
+          <li><a href="#">Контакты</a></li>
+          <li><a href="#">Блог</a></li>
+        </ul>
+      </div>
+  
+      <div class="col-cts">
+        <div class="col--phone">
+          <a href="tel:+77079900002">+7 (727) 999 00 00</a>
+          <a href="tel:+77079900002">+7 (777) 999 00 02</a>
+        </div>
+  
+        <div class="col--location">
+          <span>Казахстан, г. Алматы,<br>ул. Пушкина, д. 123</span>
+        </div>
+  
+        <a href="mailto:info@timetotravel.kz" class="col--email">info@timetotravel.kz</a>
+      </div>
+  
+    </div>
+  
+    <div class="down">
+      <div class="container flex spb center">
+        <span>Copyright © 2020 Time To Travel. All rights reserved</span>
+        <a href="https://artmedia.kz/" target="_blank">
+          Создание сайта <img src="./img/artmed.png" alt="">
+        </a>
+      </div>
+    </div>
+  </footer>
+  <script type="text/javascript" src="js/jquery.js"></script>
+  <script type="text/javascript" src="js/libs.js"></script>
+  <script>
+    wow = new WOW({
+      boxClass:     'wow',      
+      animateClass: 'animated', 
+      offset:       0,          
+      mobile:       false,       
+      live:         true        
+  })
+  wow.init();		
+  </script>
+  <script type="text/javascript" src="js/main.js"></script>
+  </body>
+  </html>

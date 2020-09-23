@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>About</title>
+	<title>О компании</title>
 	<link rel="stylesheet" href="css/libs.css">
 	<link rel="stylesheet" href="css/style.css">
 </head>
@@ -18,6 +18,11 @@
 	
 	<header class="header">
 			<div class="container flex spb center">
+				<div class="nav--btn">
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
 				<a href="index.html" class="logo-link">
 					<img src="./img/logo.png" alt="" class="w">
 					<img src="./img/logo_b.png" alt="" class="b">
@@ -40,22 +45,36 @@
 				</nav>
 	
 				<button class="btn open--modal" data-modal="#contactus"><span>Связаться с нами</span></button>
+	
+				<a href="tel:+777777777" class="col--phone m"></a>
 			</div>
 	</header>
+	
+	<a href="tel:+777777777" class="call--btn">
+		<i class="fa fa-phone" aria-hidden="true"></i>
+	</a>
 	
 	<div class="modal" id="contactus">
 		<div class="modal__layer"></div>
 		<div class="modal__block">
 			<a href="#" class="close"></a>
-			<h4>Связаться с нами</h4>
-		</div>
-	</div>
+			<div class="m-hat">
+				<h4>Связаться с нами</h4>
+				<div class="comm">Оставьте свой телефон, и мы свяжемся с вами в ближайшее время</div>
+			</div>
 	
-	<div class="modal" id="m-offer">
-		<div class="modal__layer"></div>
-		<div class="modal__block">
-			<a href="#" class="close"></a>
-			<h4>Связаться с нами</h4>
+			<div class="m-body">
+				<form action="">
+					<input type="text" required placeholder="Ваше имя">
+					<input type="tel" required placeholder="Номер телефона" class="tel">
+					<div class="g-recaptcha"><div style="width: 304px; height: 78px;"><div><iframe src="https://www.google.com/recaptcha/api2/anchor?ar=1&amp;k=6LfycasZAAAAAOleQj_j_cJoz1tKKWUcEs1p_Thw&amp;co=aHR0cDovL2x1Y2t5ZW5nbGlzaC45ei5rejo4MA..&amp;hl=en&amp;v=6TWYOsKNtRFaLeFqv5xN42-l&amp;size=normal&amp;cb=7idt9xxob5ks" width="304" height="78" role="presentation" name="a-xh09sx8p8cox" frameborder="0" scrolling="no" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox"></iframe></div><textarea id="g-recaptcha-response-2" name="g-recaptcha-response" class="g-recaptcha-response" style="width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px 25px; padding: 0px; resize: none; display: none;"></textarea></div><iframe style="display: none;"></iframe></div>
+					<div class="policy">
+						Нажимая на кнопку «Отправить» вы соглашаетесь с
+						<a href="#">политикой конфиденциальности</a>
+					</div>
+					<button class="btn filled" type="submit" data-modal="#success-send"><span>Отправить</span></button>
+				</form>
+			</div>
 		</div>
 	</div>
 	
@@ -63,70 +82,226 @@
 		<div class="modal__layer"></div>
 		<div class="modal__block">
 			<a href="#" class="close"></a>
-			<h4>Ваша заявка успешно отправлена</h4>
+			<div class="m-hat">
+				<h4>Ваша заявка успешно отправлена</h4>
+			</div>
 		</div>
 	</div>
+	
+	<div class="modal" id="success-msg">
+		<div class="modal__layer"></div>
+		<div class="modal__block">
+			<a href="#" class="close"></a>
+			<div class="m-hat">
+				<h4>Ваше сообщение успешно отправлено</h4>
+			</div>
+		</div>
+	</div>
+	<div class="wrapper about-page page">
 
-    <footer class="footer">
-      <div class="container upper grid">
-        <div class="logo">
-          <a href="index.html"><img src="./img/logo.png" alt=""></a>
-          <div class="soc-row">
-            <a href="#" target="_blank" class="soc-link"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-            <a href="#" target="_blank" class="soc-link"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-            <a href="#" target="_blank" class="soc-link"><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
-          </div>
-        </div>
-    
-        <div class="col">
-          <div class="title">Услуги</div>
-          <ul class="check--list">
-            <li><a href="#">БАО</a></li>
-            <li><a href="#">Чарын</a></li>
-            <li><a href="#" class="active">Кольсайские озера</a></li>
-            <li><a href="#">Алтын-Емел</a></li>
-            <li><a href="#">Тузколь</a></li>
-            <li><a href="#">Плато Ассы</a></li>
-          </ul>
-        </div>
-    
-        <div class="col">
-          <div class="title">Навигация</div>
-          <ul class="check--list">
-            <li><a href="#">Услуги</a></li>
-            <li><a href="#">О компании</a></li>
-            <li><a href="#">Контакты</a></li>
-            <li><a href="#">Блог</a></li>
-          </ul>
-        </div>
-    
-        <div class="col-cts">
-          <div class="col--phone">
-            <a href="tel:+77079900002">+7 (727) 999 00 00</a>
-            <a href="tel:+77079900002">+7 (777) 999 00 02</a>
-          </div>
-    
-          <div class="col--location">
-            <span>Казахстан, г. Алматы,<br>ул. Пушкина, д. 123</span>
-          </div>
-    
-          <a href="mailto:info@timetotravel.kz" class="col--email">info@timetotravel.kz</a>
-        </div>
-    
-      </div>
-    
-      <div class="down">
-        <div class="container flex spb center">
-          <span>Copyright © 2020 Time To Travel. All rights reserved</span>
-          <a href="https://artmedia.kz/" target="_blank">
-            Создание сайта <img src="./img/artmed.png" alt="">
-          </a>
-        </div>
-      </div>
-    </footer>
-    <script type="text/javascript" src="js/jquery.js"></script>
-		<script type="text/javascript" src="js/libs.js"></script>
-		<script src="js/wow.min.js"></script> <script> new WOW().init(); </script>
-		<script type="text/javascript" src="js/main.js"></script>
-</body>
-</html>
+		<div class="page-heading">
+			<img src="./img/ab-p.jpg" alt="" class="bg">
+			<div class="container">
+				<h1>О компании</h1>
+				<div class="desc">Непередаваемая красота пейзажей, главным архитектором которых является природа</div>
+			</div>
+		</div>
+
+		<div class="breadcrumbs">
+			<div class="container">
+				<ul>
+					<li><a href="index.html">Главная</a></li>
+					<li>О компании</li>
+				</ul>
+			</div>
+		</div>
+
+		<section>
+			<div class="container grid-2 align-center">
+				<div>
+					<p>Туристическая компания <b>«Time To Travel»</b> организует индивидуальные и групповые туры по Казахстану, а также занимается развитием спортивного, культурно-познавательного, гастрономического и других видов туризма.</p>
+					<p>За время стабильной работы мы заслужили доверие более 10000 клиентов, благодаря высокому качеству обслуживания, доступности туров и индивидуальному подходу к каждому клиенту.</p>
+				</div>
+				<div class="img-c wow fadeInUp" data-wow-duration="1.8s">
+					<img src="./img/abp1.jpg" alt="">
+				</div>
+			</div>
+		</section>
+
+		<div class="grey-bg">
+			<div class="container">
+				<div class="yellow-bar to-up wow zoomIn" data-wow-offset="50" data-wow-delay="1.4s" data-wow-duration="1.5s">
+					<div class="grid">
+		
+						<div class="left">О компании<br>в цифрах</div>
+		
+						<div class="flex">
+							<div class="num"><img src="./img/10.png" alt=""></div>
+							<span>лет на рынке туристических услуг</span>
+						</div>
+		
+						<div class="flex">
+							<div class="num"><img src="./img/1k.png" alt=""></div>
+							<span>клиентов, доверились нашей компании</span>
+						</div>
+		
+						<div class="flex">
+							<div class="num"><img src="./img/8.png" alt=""></div>
+							<span>специалистов в нашей команде</span>
+						</div>
+					</div>
+				</div>
+	
+				<section>
+					<h3>Туры по Казахстану для всех!</h3>
+					<p>Один из основных принципов нашей работы - это клиентоориентированность. Именно поэтому мы готовы предложить:</p>
+					<ul class="check--list">
+						<li>групповые туры по Казахстану, по Алматы и на озеро Алаколь;</li>
+						<li>индивидуальные экскурсионные туры, созданные по запросу клиента.</li>
+					</ul>
+					<p>Мы стремимся сделать качественный отдых доступным для каждого, именно поэтому при обращении в нашу компанию возможно приобрести однодневные туры и туры выходного дня и отправиться в незабываемый отпуск без отрыва от рабочих будней.
+						<br>Основными направлениями путешествий по Казахстану являются его знаковые достопримечательности, в ходе путешествия опытные экскурсоводы рассказывают об истории и интересных фактах объектов культурного и исторического наследия, даря радость открытий</p>
+				</section>
+	
+				<section class="adv-row">
+					<div class="grid">
+						<div class="a-card flex wow zoomIn" data-wow-duration="2s" data-wow-delay=".5s">
+							<img src="./img/tourist.svg" alt="">
+							<span>общение с единомышленниками</span>
+						</div>
+		
+						<div class="a-card flex wow zoomIn" data-wow-duration="2s" data-wow-delay=".8s">
+							<img src="./img/mountain.svg" alt="">
+							<span>созерцание красивой природы</span>
+						</div>
+		
+						<div class="a-card flex wow zoomIn" data-wow-duration="2s" data-wow-delay="1.1s">
+							<img src="./img/strong.svg" alt="">
+							<span>закалка<br>организма</span>
+						</div>
+		
+						<div class="a-card flex wow zoomIn" data-wow-duration="2s" data-wow-delay="1.4s">
+							<img src="./img/hot.svg" alt="">
+							<span>получение навыков выживания</span>
+						</div>
+		
+						<div class="a-card flex wow zoomIn" data-wow-duration="2s" data-wow-delay="1.7s">
+							<img src="./img/flash.svg" alt="">
+							<span>заряд<br>адреналина</span>
+						</div>
+					</div>
+				</section>
+	
+			</div>
+		</div>
+
+		<section>
+			<div class="container grid-2 down">
+				<div class="img-c">
+					<img src="./img/abp2.jpg" alt="" class="wow fadeInUp" ata-wow-duration="1.8s">
+				</div>
+
+				<div>
+					<h3>Почему с нами путешествуют</h3>
+					<p>Мы работаем, чтобы вы могли отдыхать, познавая новое, получая яркие эмоции и впечатления. Наша задача - сделать довольным каждого клиента, именно поэтому мы предоставляем следующие преимущества сотрудничества:</p>
+						<ul class="check--list">
+							<li>возможность индивидуального подбора туров</li>
+							<li>оплата туров онлайн</li>
+							<li>комфортабельный автопарк для путешествий</li>
+							<li>большой выбор направлений для отдыха</li>
+							<li>сотрудничество с лучшими объектами размещения Казахстана</li>
+							<li>Визитная карточка «Поехали» - комплексный подход к качеству от приобретения тура до работы всех сотрудников компании</li>
+						</ul>
+				</div>
+			</div>
+		</section>
+
+		<div class="container question">
+			<div class="yellow-bar">
+				<form action="" class="grid">
+	
+					<div class="left">ВОЗНИКЛИ ВОПРОСЫ?</div>
+	
+					<input type="text" required placeholder="Ваше имя">
+	
+					<input type="text" required placeholder="+7 ( ___ ) - ___ - __ - __" class="tel">
+	
+					<button class="btn open--modal" type="submit" data-modal="#success-send"><span>Оставить заявку</span></button>
+	
+				</form>
+			</div>
+		</div>
+
+	</div>
+	<footer class="footer">
+	  <div class="container upper grid">
+	    <div class="logo">
+	      <a href="index.html" class="index-link"><img src="./img/logo.png" alt=""></a>
+	      <div class="soc-row">
+	        <a href="#" target="_blank" class="soc-link"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+	        <a href="#" target="_blank" class="soc-link"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+	        <a href="#" target="_blank" class="soc-link"><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
+	      </div>
+	    </div>
+	
+	    <div class="col">
+	      <div class="title">Услуги</div>
+	      <ul class="check--list">
+	        <li><a href="#">БАО</a></li>
+	        <li><a href="#">Чарын</a></li>
+	        <li><a href="#" class="active">Кольсайские озера</a></li>
+	        <li><a href="#">Алтын-Емел</a></li>
+	        <li><a href="#">Тузколь</a></li>
+	        <li><a href="#">Плато Ассы</a></li>
+	      </ul>
+	    </div>
+	
+	    <div class="col">
+	      <div class="title">Навигация</div>
+	      <ul class="check--list">
+	        <li><a href="#">Услуги</a></li>
+	        <li><a href="#">О компании</a></li>
+	        <li><a href="#">Контакты</a></li>
+	        <li><a href="#">Блог</a></li>
+	      </ul>
+	    </div>
+	
+	    <div class="col-cts">
+	      <div class="col--phone">
+	        <a href="tel:+77079900002">+7 (727) 999 00 00</a>
+	        <a href="tel:+77079900002">+7 (777) 999 00 02</a>
+	      </div>
+	
+	      <div class="col--location">
+	        <span>Казахстан, г. Алматы,<br>ул. Пушкина, д. 123</span>
+	      </div>
+	
+	      <a href="mailto:info@timetotravel.kz" class="col--email">info@timetotravel.kz</a>
+	    </div>
+	
+	  </div>
+	
+	  <div class="down">
+	    <div class="container flex spb center">
+	      <span>Copyright © 2020 Time To Travel. All rights reserved</span>
+	      <a href="https://artmedia.kz/" target="_blank">
+	        Создание сайта <img src="./img/artmed.png" alt="">
+	      </a>
+	    </div>
+	  </div>
+	</footer>
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/libs.js"></script>
+	<script>
+		wow = new WOW({
+			boxClass:     'wow',      
+			animateClass: 'animated', 
+			offset:       0,          
+			mobile:       false,       
+			live:         true        
+	})
+	wow.init();		
+	</script>
+	<script type="text/javascript" src="js/main.js"></script>
+	</body>
+	</html>

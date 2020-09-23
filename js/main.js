@@ -17,18 +17,17 @@ function sliders() {
     });
     $('.cat--unit__nav').slick({
         autoplay: true,
-        slidesToShow: 4,
+        slidesToShow: 6,
         slidesToScroll: 1,
         asNavFor: '.cat--unit__for',
         dots: false,
-        arrows: true,
+        arrows: false,
         focusOnSelect: true,
-        vertical: true,
         responsive: [
             {
-                breakpoint: 600,
+                breakpoint: 1100,
                 settings: {
-                    slidesToShow: 3
+                    slidesToShow: 4
                 }
             }
         ]
@@ -38,13 +37,55 @@ function sliders() {
         slidesToShow: 1,
         arrows: true,
         dots: false,
-        slidesToScroll: 1
+        slidesToScroll: 1,
+        autoplay: true,
+        speed: 1600,
+        autoplayspeed: 4000
+    });
+
+    $('.else-slider').slick({
+        slidesToShow: 3,
+        arrows: true,
+        dots: false,
+        slidesToScroll: 1,
+        autoplay: true,
+        responsive: [
+            {
+                breakpoint: 1000,
+                settings: {
+                    slidesToShow: 2
+                }
+            },
+            {
+                breakpoint: 720,
+                settings: {
+                    slidesToShow: 1
+                }
+            }
+        ]
     })
 }
 
 sliders();
 
 $(function(){
+
+    $('.nav--btn').on('click', function(){
+        if ($('header .nav').is(':visible')) {
+            $('header .nav').slideUp();
+            $('body').css({'overflow': 'visible'});
+            $(this).removeClass('open');
+        } else {
+            $('header .nav').slideDown();
+            $('body').css({'overflow': 'hidden'});
+            $('.header').css({
+                'background': '#fff',
+                'box-shadow': '0px 0px 5px 0px rgba(0, 0, 0, 0.1)'
+            }).addClass('scrolled');
+            $(this).addClass('open');
+        }
+        return false;
+    });
 
     $(window).on('scroll', function() {
         if (window.pageYOffset >= 2) {
@@ -72,12 +113,12 @@ $(function(){
         return false;
     });
 
-    $('.nav--btn').on('click', function(){
-        if ($('header .nav').is(':visible')) {
-            $('header .nav').slideUp();
+    $('.arr').on('click', function(){
+        if ($(this).siblings('.dropdown-menu').is(':visible')) {
+            $(this).siblings('.dropdown-menu').slideUp();
             $(this).removeClass('open');
         } else {
-            $('header .nav').slideDown();
+            $(this).siblings('.dropdown-menu').slideDown();
             $(this).addClass('open');
         }
         return false;

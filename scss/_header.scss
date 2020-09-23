@@ -219,13 +219,16 @@ h2 {
 }
 h3 {
 	font-family: $semi;
-	font-size: 24px;
+	font-size: 26px;
 	color: #212738;
+	margin-bottom: 35px;
 	@media screen and (max-width: 1024px) {
 		font-size: 22px;
+		margin-bottom: 25px;
 	}
     @media screen and (max-width: 768px) {
-        font-size: 20px;
+				font-size: 21px;
+				margin-bottom: 15px;
     }
 }
 h4 {
@@ -287,14 +290,15 @@ input[type="submit"] {
     input[type="email"], 
     input[type="search"], 
     input[type="password"] {
-        min-height: 40px;
-        width: 100%;
+		min-height: 40px;
+		width: 100%;
 		background-color: #fff;
 		font-family: $regular;
 		font-size: 16px;
 		padding: 5px 15px;
-        margin-bottom: 15px;
-        box-shadow: none;
+		margin-bottom: 15px;
+		box-shadow: none;
+		outline: 0;
 	}
 }
 .wrapper {
@@ -315,22 +319,25 @@ input[type="submit"] {
 .container {
     width: 1170px;
     padding: 0 15px;
-    margin: 0 auto;
+		margin: 0 auto;
+		@media(max-width: 1170px) {
+			width: 100%;
+		}
 }
 
 .close {
-    width: 25px;
-    height: 25px;
+    width: 29px;
+    height: 29px;
     position: absolute;
-    right: 8px;
-    top: 10px;
+    right: 40px;
+    top: 40px;
     opacity: 1;
     outline: none;
     &:before, &:after {
         content: '';
-        width: 25px;
+        width: 29px;
         height: 2px;
-        background-color: #c74a34;
+        background-color: #fff;
         position: absolute;
         top: 50%;
         left: 0;
@@ -484,13 +491,13 @@ header {
 	
 	/* header langs */
 	
-	@media screen and (max-width: 1024px) {
+	@media screen and (max-width: 1000px) {
 		.nav--btn {
-			width: 35px;
+			width: 30px;
 			height: 30px;
 			position: absolute;
-			left: 0;
-			top: 0px;
+			left: 15px;
+			top: 12px;
 			padding: 0;
 			margin: 0;
 			outline: none;
@@ -646,6 +653,81 @@ header {
 		font-family: 'fontAwesome';
 		position: absolute;
 		font-size: 11px;
-		top: 4px; right: -15px;
+		top: 4px; right: -15px;cursor: pointer;
+		transition: 300ms ease-in;
 	}
+}
+
+.langs .arr.open:after {
+	transform: rotate(180deg);
+	color: $yellow;
+}
+.langs .dropdown-menu {
+	width: 61px; left: calc(50% - 29px);
+}
+
+.dropdown-menu {
+	background-color: #ffffff;
+	border-radius: 5px; overflow: hidden;
+	margin-top: 20px;
+	box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px;
+	overflow: visible;
+	padding-top: 10px; padding-bottom: 10px;
+	&:after {
+		position: absolute;
+		top: 5px;
+		width: 9px; height: 9px;
+		left: 50%;
+		content: ' ';
+		background: #fff;
+		border-top: 1px solid #fff; 
+		border-right: 1px solid #fff; 
+		transform: translate(-50%, -100%) rotate(-45deg);
+	}
+	a {
+		display: block;
+		line-height: 30px;
+		font-family: $medium;
+		text-transform: uppercase;
+		letter-spacing: 0.01em;
+		color: #333333;
+		text-align: center;
+	}
+}
+
+.m {display: none;}
+
+@media(max-width: 1000px) {
+	.m {display: block}
+	.header {
+		height: 55px;
+		font-size: 14px;
+		.nav, .btn {display: none;}
+		.logo-link {
+			position: absolute;
+			left: 50%; transform: translateX(-50%);
+			padding-top: 5px; padding-bottom: 5px;
+			.w, .b {height: 45px;}
+		}
+		.col--phone.m{
+			padding-left: 15px;
+			&:after {font-size: 20px; top: -8px}
+		}
+	}
+	.langs .arr:after {font-size: 9px;}
+	.header .nav {
+		position: fixed;
+		padding-top: 20px;
+		top: 55px;
+		left: 0; margin: 0;
+		width: 100%; height: calc(100vh - 55px);
+		background: rgba($color: #fff, $alpha: .95);
+		a {
+			display: block; font-size: 16px;
+			text-align: center;
+			color: #999; line-height: 34px;
+			&.active {background-color: rgba($color: $yellow, $alpha: .9); color: #fff}
+		}
+	}
+
 }

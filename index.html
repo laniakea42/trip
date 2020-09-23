@@ -18,6 +18,11 @@
 	
 	<header class="header">
 			<div class="container flex spb center">
+				<div class="nav--btn">
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
 				<a href="index.html" class="logo-link">
 					<img src="./img/logo.png" alt="" class="w">
 					<img src="./img/logo_b.png" alt="" class="b">
@@ -40,22 +45,36 @@
 				</nav>
 	
 				<button class="btn open--modal" data-modal="#contactus"><span>Связаться с нами</span></button>
+	
+				<a href="tel:+777777777" class="col--phone m"></a>
 			</div>
 	</header>
+	
+	<a href="tel:+777777777" class="call--btn">
+		<i class="fa fa-phone" aria-hidden="true"></i>
+	</a>
 	
 	<div class="modal" id="contactus">
 		<div class="modal__layer"></div>
 		<div class="modal__block">
 			<a href="#" class="close"></a>
-			<h4>Связаться с нами</h4>
-		</div>
-	</div>
+			<div class="m-hat">
+				<h4>Связаться с нами</h4>
+				<div class="comm">Оставьте свой телефон, и мы свяжемся с вами в ближайшее время</div>
+			</div>
 	
-	<div class="modal" id="m-offer">
-		<div class="modal__layer"></div>
-		<div class="modal__block">
-			<a href="#" class="close"></a>
-			<h4>Связаться с нами</h4>
+			<div class="m-body">
+				<form action="">
+					<input type="text" required placeholder="Ваше имя">
+					<input type="tel" required placeholder="Номер телефона" class="tel">
+					<div class="g-recaptcha"><div style="width: 304px; height: 78px;"><div><iframe src="https://www.google.com/recaptcha/api2/anchor?ar=1&amp;k=6LfycasZAAAAAOleQj_j_cJoz1tKKWUcEs1p_Thw&amp;co=aHR0cDovL2x1Y2t5ZW5nbGlzaC45ei5rejo4MA..&amp;hl=en&amp;v=6TWYOsKNtRFaLeFqv5xN42-l&amp;size=normal&amp;cb=7idt9xxob5ks" width="304" height="78" role="presentation" name="a-xh09sx8p8cox" frameborder="0" scrolling="no" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox"></iframe></div><textarea id="g-recaptcha-response-2" name="g-recaptcha-response" class="g-recaptcha-response" style="width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px 25px; padding: 0px; resize: none; display: none;"></textarea></div><iframe style="display: none;"></iframe></div>
+					<div class="policy">
+						Нажимая на кнопку «Отправить» вы соглашаетесь с
+						<a href="#">политикой конфиденциальности</a>
+					</div>
+					<button class="btn filled" type="submit" data-modal="#success-send"><span>Отправить</span></button>
+				</form>
+			</div>
 		</div>
 	</div>
 	
@@ -63,7 +82,19 @@
 		<div class="modal__layer"></div>
 		<div class="modal__block">
 			<a href="#" class="close"></a>
-			<h4>Ваша заявка успешно отправлена</h4>
+			<div class="m-hat">
+				<h4>Ваша заявка успешно отправлена</h4>
+			</div>
+		</div>
+	</div>
+	
+	<div class="modal" id="success-msg">
+		<div class="modal__layer"></div>
+		<div class="modal__block">
+			<a href="#" class="close"></a>
+			<div class="m-hat">
+				<h4>Ваше сообщение успешно отправлено</h4>
+			</div>
 		</div>
 	</div>
 	<div class="wrapper index-page">
@@ -76,7 +107,7 @@
 					<div class="container">
 						<h1>Путешествуйте и наслаждайтесь</h1>
 						<span>Походы по горам и другие виды экскурсий в Алматы</span>
-						<button class="btn filled open--modal wow fadeInUp" data-wow-delay=".2s" data-wow-duration="1.5s" data-modal="#m-offer"><span>Оставить заявку</span></button>
+						<button class="btn filled open--modal wow fadeInUp" data-wow-delay=".2s" data-wow-duration="1.5s" data-modal="#contactus"><span>Оставить заявку</span></button>
 					</div>
 				</div>
 
@@ -85,7 +116,7 @@
 					<div class="container">
 						<h1>Путешествуйте и наслаждайтесь</h1>
 						<span>Походы по горам и другие виды экскурсий в Алматы</span>
-						<button class="btn filled open--modal wow fadeInUp" data-wow-delay=".2s" data-wow-duration="1.5s" data-modal="#m-offer"><span>Оставить заявку</span></button>
+						<button class="btn filled open--modal wow fadeInUp" data-wow-delay=".2s" data-wow-duration="1.5s" data-modal="#contactus"><span>Оставить заявку</span></button>
 					</div>
 				</div>
 
@@ -94,7 +125,7 @@
 					<div class="container">
 						<h1>Путешествуйте и наслаждайтесь</h1>
 						<span>Походы по горам и другие виды экскурсий в Алматы</span>
-						<button class="btn filled open--modal wow fadeInUp" data-wow-delay=".2s" data-wow-duration="1.5s" data-modal="#m-offer"><span>Оставить заявку</span></button>
+						<button class="btn filled open--modal wow fadeInUp" data-wow-delay=".2s" data-wow-duration="1.5s" data-modal="#contactus"><span>Оставить заявку</span></button>
 					</div>
 				</div>
 
@@ -103,7 +134,7 @@
 					<div class="container">
 						<h1>Путешествуйте и наслаждайтесь</h1>
 						<span>Походы по горам и другие виды экскурсий в Алматы</span>
-						<button class="btn filled open--modal wow fadeInUp" data-wow-delay=".8s" data-wow-duration="1.5s" data-modal="#m-offer"><span>Оставить заявку</span></button>
+						<button class="btn filled open--modal wow fadeInUp" data-wow-delay=".8s" data-wow-duration="1.5s" data-modal="#contactus"><span>Оставить заявку</span></button>
 					</div>
 				</div>
 
@@ -261,7 +292,7 @@
 		<div class="content">
 			<h2 class="wow fadeInUp" data-wow-duration="1.5s">Хотите новых ощущений?</h2>
 			<p class="wow fadeInUp" data-wow-duration="1.5s">Мы готовы организовать для вас незабываемый отдых!<br>Оставьте заявку и мы свяжемся с вами</p>
-			<button class="btn filled open--modal" data-modal="#m-offer"><span>Оставить заявку</span></button>
+			<button class="btn filled open--modal" data-modal="#contactus"><span>Оставить заявку</span></button>
 		</div>
 	</section>
 
@@ -337,7 +368,7 @@
 <footer class="footer">
   <div class="container upper grid">
     <div class="logo">
-      <a href="index.html"><img src="./img/logo.png" alt=""></a>
+      <a href="index.html" class="index-link"><img src="./img/logo.png" alt=""></a>
       <div class="soc-row">
         <a href="#" target="_blank" class="soc-link"><i class="fa fa-instagram" aria-hidden="true"></i></a>
         <a href="#" target="_blank" class="soc-link"><i class="fa fa-facebook" aria-hidden="true"></i></a>
